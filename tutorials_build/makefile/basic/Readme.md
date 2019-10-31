@@ -17,4 +17,7 @@ $ man make
 
    Use file as a makefile.
 
+## Execution
 
+make            // default Makefile will be considered.
+make -f <file>  // File will be considerd as a Makefile
