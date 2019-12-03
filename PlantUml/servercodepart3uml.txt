@@ -1,0 +1,99 @@
+@startuml
+
+title Server.cpp Part:3 (Streaming)
+
+
+start
+ 
+:**image size**;
+:int size = 172800;
+:int frame_counter = 0;
+:char*image=(char*)malloc(size);
+
+
+if (  Simple image buffer 320 * 180 * 3) then (for)
+  : **for(int i =0; i<size;i++)** ;
+ 
+  :           **image[i]=127**;
+  
+
+else (for )
+  :for (;;);
+  
+  
+: webserver_** getIntValueByName**("max_ color",255)
+
+std::string room::getStringValueByName (std::string name , std::string default_val)
+
+Value of HTML tag "max_color", Second parameter is value "max_color";
+
+note right
+ * This function returns int value of shared variable.
+ * User can select the Maximum color value (between 1-255). 
+ * Binary Frame- buffer of bytes (0-255) 
+end note
+
+
+ if (if webserver_ isRunning) then (If);
+
+
+:( webserver_ **getBoolValueByName**("stream_ en",false) ;
+
+ :**webserver_ streamBuffer(image, size, "main")**
+ 
+ void room::streamBuffer( char* buffer, int size , std::**string header**)
+
+ **buffer Array of chars**
+ 
+ **size: Size of buffer**
+ 
+ **header:Some header for buffer. Some information what buffer contains.**;
+ 
+ note right
+ * This function allows to stream buffer of bytes.
+ end note
+ 
+else (else )
+  :break;
+  
+  note right
+  * server is not Running
+  end note
+  
+  endif
+
+endif
+
+:               **Add out Value**
+std::string value ="NXP"
+webserver_ addOutValue(addOutValue(" String",value)
+webserver_ addOutValue(addOutValue(" Bool",true)
+webserver_ addOutValue(addOutValue(" Int",frame_counter)
+webserver_ addOutValue(addOutValue(" Double",);
+note left
+*This function prepares value for future send to all clients. It allows to share some results.
+end note
+note right
+*Bool is not used in client code.
+end note
+
+: **webserver_ sendOutSharedValues()**
+void room::sendOutSharedValues();
+
+note left
+*This function sends all prepared out value.
+end note
+
+: **webserver_ sendOutSharedValues()**
+webserver_ sendOutSharedValues();
+
+note right
+*Send output values to clients
+end note
+
+
+
+
+stop
+
+@enduml
