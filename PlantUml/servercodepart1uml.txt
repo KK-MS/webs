@@ -1,0 +1,40 @@
+@startuml
+
+title Server.cpp Part:1 
+
+
+start
+ 
+:                      Include header file
+: void ** onInitMethod **(std::string*name, std::string*value);
+
+note right
+*  OnInitMethod:  
+end note
+  
+if (Name compared with **HTML Tag**) then (if)
+  :(*name).compare(**"max_color"**) ==0) ;
+  : value = "127";
+else (if)
+  :(*name).compare(**"stream_en"**) ==0);
+ : value = "true";
+endif
+:(return);
+
+:** void onUpdateMethod()std::string*name,std::string*value)**;
+
+note left
+*  Do something when some shared value was updated ! 
+*  This is only event, the value was updated locally in server.
+* So use this only as trigger of your logic depends on updated
+  value name !!!
+ end note
+ 
+ : ** void onCommandMethod(std::string*command)**;
+ note right
+*  Do something with own command  
+end note
+
+: servercode part:2;
+
+@enduml
