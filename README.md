@@ -1,4 +1,9 @@
 # Webserver research
+
+wss://echo.websocket.org
+wss://10.5.11.66:8080
+
+
 Basically for embedded thus get started with C, C++ based servers.
 
 Scope:​
