@@ -23,3 +23,18 @@ webservers
 
 ## Git commands:
 Go to ur folder:
+1. git init
+2. git status (To check which files need to add in repo)
+3. git add <file name>
+
+## Switching branches
+1. master to your branch or vice versa
+2. git checkout <branch name>
+     
+## Errors during switching branches:
+# error: pathspec 'this branch' did not matche any file(s) known to git
+# Solution:
+1. git remote update
+2.git fetch
+3.git checkout <branch name>
+     
