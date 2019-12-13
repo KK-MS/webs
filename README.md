@@ -22,19 +22,33 @@ Output:
 webservers
 
 ## Git commands:
-Go to ur folder:
+Go to your folder:
 1. git init
 2. git status (To check which files need to add in repo)
 3. git add <file name>
 
-## Switching branches
+## Switching branchesgit push origin sj
+
 1. master to your branch or vice versa
 2. git checkout <branch name>
      
 ## Errors during switching branches:
-# error: pathspec 'this branch' did not matche any file(s) known to git
-# Solution:
+## error: pathspec 'this branch' did not matche any file(s) known to git
+## Solution:
+
 1. git remote update
 2.git fetch
 3.git checkout <branch name>
+4. git status
+    
+## Error: Tell me who you are
+## Solution: 
+1. git config user.name <>
+2. git config user.email <>
+3. git add
+4. git commit -m "<add comment>"
+5. git push origin <Branch name>
+     
+
+2.
      
