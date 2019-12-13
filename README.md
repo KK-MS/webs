@@ -15,6 +15,8 @@ Scope:​
 9. Create a client App which can connect to a NXP web Server.
 10. Once set up is done start research for different parameters.
 
+54
+   
 Output:
 
 1. Display data (Image,video, Statistics) on App.
@@ -49,6 +51,4 @@ Go to your folder:
 4. git commit -m "<add comment>"
 5. git push origin <Branch name>
      
-
-2.
-     
+  
